@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Users / Profile - NiceAdmin Bootstrap Template</title>
+  <title>Forms / Elements - NiceAdmin Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -50,13 +50,6 @@
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
-
-    <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-      </form>
-    </div><!-- End Search Bar -->
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
@@ -212,7 +205,7 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Krishna Pranav</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -282,22 +275,22 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link " data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-journal-text"></i><span>Tasks</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="forms-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
+            <a href="addNewTask.html" class="active">
               <i class="bi bi-circle"></i><span>Add New Task</span>
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
+            <a href="manageTasks.html">
               <i class="bi bi-circle"></i><span>Manage Tasks</span>
             </a>
           </li>
           <li>
-            <a href="forms-editors.html">
+            <a href="calendar.html">
               <i class="bi bi-circle"></i><span>Calendar</span>
             </a>
           </li>
@@ -314,7 +307,7 @@
       </li><!-- End Login Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link " href="userProfile.html">
+        <a class="nav-link collapsed" href="userProfile.html">
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>
@@ -333,36 +326,119 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1 style="display: flex; justify-content: center;">Profile</h1>
-      <nav style="display: flex; justify-content: center;">
+      <h1>New task</h1>
+      <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="homepage.html">Home</a></li>
-          <li class="breadcrumb-item">Users</li>
-          <li class="breadcrumb-item active">Profile</li>
+          <li class="breadcrumb-item">Tasks</li>
+          <li class="breadcrumb-item active">Add New Task</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section profile">
-      <div class="row flex justify-content-center">
-        <div class="col-xl-4">
+    <section class="section">
+      <div class="row">
+        <!-- <div class="col-lg-6"> -->
 
           <div class="card">
-            <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+            <div class="card-body">
+              <h5 class="card-title">New Task</h5>
 
-              <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-              <h2>Krishna Pranav</h2>
-              <h3>Intern</h3>
-              <div class="social-links mt-2">
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              </div>
+              <!-- General Form Elements -->
+              <form class="form">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" name="taskname" id="taskname1" placeholder="name@example.com">
+                  <label for="floatingInput">Task Name</label>
+                </div>
+
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">></span>
+                  <input type="text" class="form-control" placeholder="Add tag" aria-label="Username" aria-describedby="basic-addon1" name="project_tag" id="project_tag1">
+                </div>
+
+                <div class="row mb-3">
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Description</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" style="height: 100px" name="task_description" id="task_description1"></textarea>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputDate" class="col-sm-2 col-form-label">Due Date</label>
+                  <div class="col-sm-10">
+                    <input type="date" class="form-control" name="due_date" id="due_date1">
+                  </div>
+                </div>
+
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                  <input type="text" class="form-control" placeholder="Collaborator" aria-label="Username" aria-describedby="basic-addon1" name="collaborators" id="collaborators1">
+                </div>
+
+                <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">File Upload</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="file" name="formFile" id="formFile1">
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label for="inputTime" class="col-sm-2 col-form-label">Time</label>
+                  <div class="col-sm-10">
+                    <input type="time" class="form-control" name="time_of_action" id="time_of_action1">
+                  </div>
+                </div>
+
+                <div class="form-check">
+                  <label class="form-check-label" for="gridCheck1">
+                    Recurring Event?
+                  </label>
+                  <input class="form-check-input" type="checkbox" name="prty" id="prty1">
+                </div>
+
+                <label>Priority</label>
+
+                <div>
+                  <input type="range" class="form-range" min="0" max="2" step="1" name="priorityrange" id="priorityrange1">
+                </div>
+
+                <div class="row mb-3">
+                  <label for="inputDate" class="col-sm-2 col-form-label">Action Date</label>
+                  <div class="col-sm-10">
+                    <input type="date" class="form-control" name="action_date" id="action_date1">
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-sm-10">
+                    <textarea class="form-control" style="height: 100px" name="action" id="action1" placeholder="Action"></textarea>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Add Notes</h5>
+      
+                    <!-- Quill Editor Bubble -->
+                    <!-- <p>Select some text to display options in poppovers</p> -->
+                    <div class="quill-editor-bubble">
+                      <p id="add_notes">Notes here</p>
+                    </div>
+                    <!-- End Quill Editor Bubble -->
+      
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary" onclick="Submit_Task_details()">Submit</button>
+                  </div>
+                </div>
+                <!-- onclick="Submit_Task_details()" -->
+
+              </form><!-- End General Form Elements -->
+
             </div>
           </div>
-
-        </div>
       </div>
     </section>
 
@@ -396,7 +472,97 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="mongoose/data.js"></script>
 
+<!-- Form Submission Script -->
+  <script>
+
+  function Submit_Task_details(event) {
+      var task_name = document.getElementById("taskname1").value;
+      var project_name = document.getElementById("project_tag1").value;
+      var task_description = document.getElementById("task_description1").value;
+      var due_date = document.getElementById("due_date1").value;
+      var collabs = document.getElementById("collaborators1").value;
+      var action_time = document.getElementById("time_of_action1").value;
+      var priority = document.getElementById("prty1").value;
+      var recurring_event = document.getElementById("priorityrange1").value;
+      var action_date = document.getElementById("action_date1").value;
+      var action = document.getElementById("action1").value;
+
+      var data = {task_name, project_name, task_description, due_date
+        , collabs, action_time, priority, recurring_event, action_date, action
+      }
+
+      SendToServer(data);
+  }
+
+
+
+
+
+    // const formEl = document.querySelector('.form');
+
+    // formEl.addEventListener('submit', (event) => {
+    //   event.preventDefault();
+    //   // console.log("HELLO");
+
+    //   const formData = new FormData(formEl);
+    //   // console.log("Helo");
+    //   // console.log(formData.getElementById('taskname'));
+    //   for(item of formData) {
+    //     console.log(item[0], item[1]);
+    //   }
+    // });
+
+    // fetch('https://jsonplaceholder.typicode.com/users')
+    //   .then(res => {
+    //     return res.json();
+    //   })
+    //   .then(data => {
+    //     data.forEach(user => {
+    //       // const markup = `<tr><td>${user.name}</td><td>${user.contact}</td></tr>`;
+
+    //       // document.querySelector('tbody').insertAdjacentHTML('beforeend', markup);
+    //       console.log(user);
+    //     });
+    //   })
+
+    // function Submit_Task_details(event) {
+    //   var task_name = document.getElementById("taskname").value;
+    //   var project_name = document.getElementById("project_tag").value;
+    //   var task_description = document.getElementById("task_description").value;
+    //   var due_date = document.getElementById("due_date").value;
+    //   var collabs = document.getElementById("collaborators").value;
+    //   var files = document.getElementById("formFile").value;
+    //   var action_time = document.getElementById("time_of_action").value;
+    //   var recurring_event = document.getElementById("prty").value;
+    //   var action_date = document.getElementById("action_date").value;
+    //   var action = document.getElementById("action").value;
+
+    //   if(recurring_event=="on") {
+    //     recurring_event = "recurring";
+    //   }
+    //   else {
+    //     recurring_event = "regular";
+    //   }
+    //   var priority = document.getElementById("priorityrange").value;
+    //   var notes = document.getElementById("add_notes");
+    //   var action_set = {action, action_date};
+
+      // console.log(task_name);
+      // console.log(project_name);
+      // console.log(task_description);
+      // console.log(due_date);
+      // console.log(collabs);
+      // console.log(files);
+      // console.log(action_time);
+      // console.log(recurring_event);
+      // console.log(priority);
+      // console.log(notes);
+      // console.log(action_set);
+
+    // }
+  </script>
 </body>
 
 </html>
